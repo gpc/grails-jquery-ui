@@ -48,13 +48,16 @@ class JqueryUiTagLib {
         js:[writer:'js', type:'text/javascript']
     ]
 
+    def pluginManager
+    
     def resources = { attrs ->
         def theme = attrs.theme ?: 'ui-lightness'
-        def ver = '1.8'
+        def plugin = pluginManager.getGrailsPlugin('jquery-ui')
+        def jqver = plugin.instance.JQUERYUI_VERSION
         out << resourceLink(plugin: attrs.theme ? null : 'jqueryUi', type:'css', dir:'jquery-ui/themes/'+theme, 
-            file:'jquery-ui-'+ver+'.custom.css', media:'screen, projection')
+            file:'jquery-ui-'+jqver+'.custom.css', media:'screen, projection')
         out << resourceLink(plugin: 'jqueryUi', type:'js', dir:'jquery-ui/js', 
-            file:'jquery-ui-'+ver+'.custom.min.js')
+            file:'jquery-ui-'+jqver+'.custom.min.js')
     }
 
     def resourceLink = { attrs ->

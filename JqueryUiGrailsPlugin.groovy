@@ -1,6 +1,11 @@
 class JqueryUiGrailsPlugin {
     // the plugin version
-    def version = "1.8.2"
+    def version = "1.8.2.1"
+
+    // @todo This MUST be updated when you update the version of jquery ui
+    static JQUERYUI_VERSION = "1.8.2"
+
+
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.2 > *"
     // the other plugins this plugin depends on
@@ -20,7 +25,7 @@ Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin t
 
     // URL to the plugin's documentation
     def documentation = "http://grails.org/plugin/jquery-ui"
-
+    
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before 
     }
