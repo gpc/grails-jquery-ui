@@ -10,7 +10,6 @@ Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin t
     <resource>BuildConfig</resource>
     <resource>Config</resource>
     <resource>DataSource</resource>
-    <resource>JQueryConfig</resource>
     <resource>UrlMappings</resource>
     <resource>com.grailsrocks.jqueryui.JqueryUiTagLib</resource>
   </resources>
