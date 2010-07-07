@@ -1,4 +1,4 @@
-<plugin name='jquery-ui' version='1.8.2.1' grailsVersion='1.2 &gt; *'>
+<plugin name='jquery-ui' version='1.8.2.2' grailsVersion='1.2 &gt; *'>
   <author>Marc Palmer</author>
   <authorEmail>marc@grailsrocks.com</authorEmail>
   <title>jQuery UI resources</title>
@@ -10,11 +10,12 @@ Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin t
     <resource>BuildConfig</resource>
     <resource>Config</resource>
     <resource>DataSource</resource>
+    <resource>JQueryConfig</resource>
     <resource>UrlMappings</resource>
     <resource>com.grailsrocks.jqueryui.JqueryUiTagLib</resource>
   </resources>
   <dependencies>
-    <plugin name='jquery' version='1.4.2.1 &gt; *' />
+    <plugin name='jquery' version='1.4.2.4 &gt; *' />
     <resolvers>
       <resolver type='grailsPlugins' name='grailsPlugins' />
     </resolvers>

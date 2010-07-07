@@ -1,6 +1,6 @@
 class JqueryUiGrailsPlugin {
     // the plugin version
-    def version = "1.8.2.1"
+    def version = "1.8.2.2"
 
     // @todo This MUST be updated when you update the version of jquery ui
     static JQUERYUI_VERSION = "1.8.2"
@@ -9,7 +9,7 @@ class JqueryUiGrailsPlugin {
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.2 > *"
     // the other plugins this plugin depends on
-    def dependsOn = [jquery:'1.4.2.1 > *']
+    def dependsOn = [jquery:'1.4.2.4 > *']
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
             "grails-app/views/error.gsp"
