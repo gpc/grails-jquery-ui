@@ -54,8 +54,14 @@ class JqueryUiTagLib {
         def theme = attrs.theme ?: 'ui-lightness'
         def plugin = pluginManager.getGrailsPlugin('jquery-ui')
         def jqver = plugin.instance.JQUERYUI_VERSION
-        out << resourceLink(plugin: attrs.theme ? null : 'jqueryUi', type:'css', dir:'jquery-ui/themes/'+theme, 
+        // If a plugin is using THIS plugin, if they change theme they need to be able
+        // to specify their plugin name so we can load the theme!
+        def plug = attrs.theme ? attrs.plugin : 'jqueryUi'
+        def themedir = attrs.themeDir ? attrs.themeDir + '/' + theme : 'jquery-ui/themes/'+theme
+        
+        out << resourceLink(plugin: plug, type:'css', dir: themedir, 
             file:'jquery-ui-'+jqver+'.custom.css', media:'screen, projection')
+        
         out << resourceLink(plugin: 'jqueryUi', type:'js', dir:'jquery-ui/js', 
             file:'jquery-ui-'+jqver+'.custom.min.js')
     }
