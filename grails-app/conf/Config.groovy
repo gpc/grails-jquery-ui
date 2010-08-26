@@ -73,4 +73,7 @@ log4j = {
     warn   'org.mortbay.log'
 }
 
+jqueryUi.minified = false
+jqueryUi.cdn = "googlecode"
+
 
