@@ -75,10 +75,10 @@ class JqueryUiTagLib {
 
 	  	// use the theme css from cdn only if it's not provided by the app or a plugin.
 	  	if (cdn && !attrs.plugin && !attrs.themeDir)
-			out << cdnLink (cdn:cdn, type:'css', jqver:jqver, theme:theme, minified:min)
+			out << cdnLink (cdn:cdn, type:'css', jqver:jqver, theme:theme, minified:min, id:'jquery-ui-theme')
 	  	else
 			out << resourceLink(plugin: plug, type:'css', dir: themedir,
-				file:'jquery-ui-'+jqver+'.custom.css', media:'screen, projection')
+				file:'jquery-ui-'+jqver+'.custom.css', media:'screen, projection', id:'jquery-ui-theme')
 
 		// use the .js always from cdn if requested
 	    if (cdn)
