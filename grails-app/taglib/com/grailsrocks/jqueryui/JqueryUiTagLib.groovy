@@ -66,7 +66,8 @@ class JqueryUiTagLib {
         // to specify their plugin name so we can load the theme!
         def plug = attrs.plugin ? attrs.plugin : 'jqueryUi'
         def themedir = attrs.themeDir ? attrs.themeDir + '/' + theme : 'jquery-ui/themes/'+theme
-
+        def themeCSS = attrs.themeCss
+        
         // if nothing is in config, serve it minified to stay compatible with older plugin versions
         def min = grailsApplication.config.jqueryUi.get('minified', true);
         // must point to a key in CDN_URLS (currently 'googlecode' is the only key there)
@@ -80,9 +81,13 @@ class JqueryUiTagLib {
             out << cdnLink (cdn:cdn, type:'css', jqver:jqver, theme:theme, minified:min, id:'jquery-ui-theme')
         }
         else {
-            out << resourceLink(plugin: plug, type:'css', dir: themedir,
-                                file:'jquery-ui-'+jqver+'.custom.css', media:'screen, projection',
-                                id:'jquery-ui-theme')
+            if (themeCSS) {
+                out << resourceLink(url: themeCSS, type:'css')
+            } else {
+                out << resourceLink(plugin: plug, type:'css', dir: themedir,
+                                    file:'jquery-ui-'+jqver+'.custom.css', media:'screen, projection',
+                                    id:'jquery-ui-theme')
+            }
         }
 
         // use the .js always from cdn if requested
