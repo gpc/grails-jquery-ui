@@ -5,26 +5,23 @@ def plugin = appCtx.pluginManager.getGrailsPlugin('jquery-ui')
 def jqver = plugin.instance.JQUERYUI_VERSION
 
 modules = {
-    'jquery-ui' {
-        dependsOn 'jquery'
-        
+    'jquery-theme' {
         resource id:'theme',
             url:[ plugin: 'jqueryUi', dir: 'jquery-ui/themes/ui-lightness',
                   file:'jquery-ui-'+jqver+'.custom.css'], 
             attrs:[media:'screen, projection']
-            
+    }
+
+    'jquery-ui' {
+        dependsOn 'jquery', 'jquery-theme'
+        
         resource id:'js', url:[plugin: 'jqueryUi', dir:'jquery-ui/js', file:"jquery-ui-${jqver}.custom.min.js"],
             nominify: true
     }
 
     'jquery-ui-dev' {
-        dependsOn 'jquery'
+        dependsOn 'jquery', 'jquery-theme'
 
-        resource id:'theme',
-            url:[ plugin: 'jqueryUi', dir: 'jquery-ui/themes/ui-lightness',
-                  file:'jquery-ui-'+jqver+'.custom.css'], 
-            attrs:[media:'screen, projection']
-            
         resource id:'js', url:[plugin: 'jqueryUi', dir:'jquery-ui/js', file:"jquery-ui-${jqver}.custom.js"]
     }
 }

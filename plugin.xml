@@ -1,4 +1,4 @@
-<plugin name='jquery-ui' version='1.8.10' grailsVersion='1.2 &gt; *'>
+<plugin name='jquery-ui' version='1.8.10.1' grailsVersion='1.2 &gt; *'>
   <author>Marc Palmer</author>
   <authorEmail>marc@grailsrocks.com</authorEmail>
   <title>jQuery UI resources</title>
