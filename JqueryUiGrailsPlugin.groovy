@@ -1,9 +1,9 @@
 class JqueryUiGrailsPlugin {
     // the plugin version
-    def version = "1.8.10.1"
+    def version = "1.8.11"
 
     // @todo This MUST be updated when you update the version of jquery ui
-    static JQUERYUI_VERSION = "1.8.10"
+    static JQUERYUI_VERSION = "1.8.11"
 
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.2 > *"
