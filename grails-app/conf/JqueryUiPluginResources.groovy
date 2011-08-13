@@ -16,7 +16,7 @@ modules = {
         dependsOn 'jquery', 'jquery-theme'
         
         resource id:'js', url:[plugin: 'jqueryUi', dir:'jquery-ui/js', file:"jquery-ui-${jqver}.custom.min.js"],
-            nominify: true
+            nominify: true, disposition: 'head'
     }
 
     'jquery-ui-dev' {
