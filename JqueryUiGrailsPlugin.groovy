@@ -27,4 +27,6 @@ Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin t
 '''
 
     def documentation = "http://grails.org/plugin/jquery-ui"
+    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPJQUERYUI" ]
+    def scm = [ url: 'https://github.com/gpc/grails-jquery-ui']
 }
