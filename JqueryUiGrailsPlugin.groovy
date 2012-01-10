@@ -7,6 +7,7 @@ class JqueryUiGrailsPlugin {
     static PLUGIN_MINOR_REVISION = ""
 
     // the plugin version
+    // NOTE: this does not compile correctly under Grails 2.0, use 1.3.7
     def version = JQUERYUI_VERSION + (PLUGIN_MINOR_REVISION ? '.' + PLUGIN_MINOR_REVISION : '')
 
 
@@ -22,9 +23,7 @@ class JqueryUiGrailsPlugin {
     def author = "Marc Palmer"
     def authorEmail = "marc@grailsrocks.com"
     def title = "jQuery UI resources"
-    def description = '''\\
-Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin to avoid resource duplication and conflicts.
-'''
+    def description = '''Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin to avoid resource duplication and conflicts.'''
 
     def documentation = "http://grails.org/plugin/jquery-ui"
     def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPJQUERYUI" ]
