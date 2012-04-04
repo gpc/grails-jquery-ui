@@ -1,6 +1,6 @@
 class JqueryUiGrailsPlugin {
     // @todo This MUST be updated when you update the version of jquery ui
-    static JQUERYUI_VERSION = "1.8.17"
+    static JQUERYUI_VERSION = "1.8.18"
 
     // Put in here the minor revision of this plugin, appended to the JQUERY UI version automatically to
     // make plugin release version
