@@ -2,9 +2,7 @@
   <author>Marc Palmer</author>
   <authorEmail>marc@grailsrocks.com</authorEmail>
   <title>jQuery UI resources</title>
-  <description>\
-Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin to avoid resource duplication and conflicts.
-</description>
+  <description>Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin to avoid resource duplication and conflicts.</description>
   <documentation>http://grails.org/plugin/jquery-ui</documentation>
   <resources>
     <resource>BuildConfig</resource>
