@@ -12,7 +12,6 @@ class JqueryUiGrailsPlugin {
 
 
     def grailsVersion = "1.2 > *"
-    def dependsOn = [jquery:'1.3.2.1 > *']
     def title = "jQuery UI Plugin"
     def description = 'Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin to avoid resource duplication and conflicts.'
 
