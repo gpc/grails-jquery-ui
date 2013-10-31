@@ -11,21 +11,17 @@ class JqueryUiGrailsPlugin {
     def version = JQUERYUI_VERSION + (PLUGIN_MINOR_REVISION ? '.' + PLUGIN_MINOR_REVISION : '')
 
 
-    // the version or versions of Grails the plugin is designed for
     def grailsVersion = "1.2 > *"
-    // the other plugins this plugin depends on
     def dependsOn = [jquery:'1.3.2.1 > *']
-    // resources that are excluded from plugin packaging
-    def pluginExcludes = [
-            "grails-app/views/error.gsp"
-    ]
-
-    def author = "Marc Palmer"
-    def authorEmail = "marc@grailsrocks.com"
-    def title = "jQuery UI resources"
-    def description = '''Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin to avoid resource duplication and conflicts.'''
+    def title = "jQuery UI Plugin"
+    def description = 'Simply supplies jQuery UI resources, depends on jQuery plugin. Use this plugin to avoid resource duplication and conflicts.'
 
     def documentation = "http://grails.org/plugin/jquery-ui"
-    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPJQUERYUI" ]
-    def scm = [ url: 'https://github.com/gpc/grails-jquery-ui']
+    def license = "APACHE"
+    def organization = [name: "Grails Plugin Collective", url: "http://github.com/gpc"]
+    def developers = [
+        [name: 'Marc Palmer', email: 'marc@grailsrocks.com']
+    ]
+    def issueManagement = [system: "JIRA", url: "http://jira.grails.org/browse/GPJQUERYUI"]
+    def scm = [url: 'https://github.com/gpc/grails-jquery-ui']
 }

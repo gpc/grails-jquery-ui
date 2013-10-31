@@ -67,7 +67,7 @@ class JqueryUiTagLib {
         def plug = attrs.plugin ? attrs.plugin : 'jqueryUi'
         def themedir = attrs.themeDir ? attrs.themeDir + '/' + theme : 'jquery-ui/themes/'+theme
         def themeCSS = attrs.themeCss
-        
+
         // if nothing is in config, serve it minified to stay compatible with older plugin versions
         def min = grailsApplication.config.jqueryUi.get('minified', true);
         // must point to a key in CDN_URLS (currently 'googlecode' is the only key there)
