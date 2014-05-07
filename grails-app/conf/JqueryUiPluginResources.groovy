@@ -20,7 +20,7 @@ modules = {
     }
 
     'jquery-ui-dev' {
-        dependsOn 'jquery', 'jquery-theme'
+        dependsOn 'jquery-dev', 'jquery-theme'
 
         resource id: 'js', url:[plugin: 'jqueryUi', dir:'jquery-ui/js', file:"jquery-ui-${jqver}.custom.js"]
     }
