@@ -3,12 +3,12 @@ class JqueryUiGrailsPlugin {
     static JQUERYUI_VERSION = "1.10.3"
 
     // Put in here the minor revision of this plugin
-    static PLUGIN_MINOR_REVISION = ""
+    static PLUGIN_MINOR_REVISION = "1"
 
     // the version attribute must be constant, so manually update this to be
     // JQUERYUI_VERSION and PLUGIN_MINOR_REVISION concatenated, with a '.'
     // if PLUGIN_MINOR_REVISION isn't blank
-    def version = '1.10.3'
+    def version = '1.10.3.1'
 
 
     def grailsVersion = "1.3 > *"
