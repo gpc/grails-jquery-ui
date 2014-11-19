@@ -17,13 +17,15 @@ Or, to get the last version:
 * place it in the lib directory of your Grails project,
 * rename it to `jquery-ui-<version>`
 * install the plugin:
-  ``` 
-  grails install-plugin jquery-ui <version>
-  ```
+   ```
+   grails install-plugin jquery-ui <version>
+   ```
+  
 * or, if you use the Maven 2 integration for Grails:
-  ```
-  mvn org.grails:grails-maven-plugin:install-plugin -DpluginName=jquery-ui -DpluginVersion=<version>
-  ```
+
+   ```
+   mvn org.grails:grails-maven-plugin:install-plugin -DpluginName=jquery-ui -DpluginVersion=<version>
+   ```
   
 Description
 -----------
