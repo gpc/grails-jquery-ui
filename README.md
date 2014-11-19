@@ -35,18 +35,18 @@ Use this plugin in your own apps and plugins to avoid resource duplication and c
 
 When you have done your initial development and are ready for production, you may want to optimize these resources / use some minifying on them.
 
-*This plugin supports the Grails Resources framework*
+**This plugin supports the Grails Resources framework**
 
 ### Note for developers working with this plugin
 
 This plugin just provides the resources and a tag to include them. It must not include tags to add new functionality / wrap jQ UI features.
-*You must not change the theme shipped with the plugin, and you must include all the standard jQuery UI widget*
+**You must not change the theme shipped with the plugin, and you must include all the standard jQuery UI widget**
 If you need a newer version of jQuery UI than is currently available with this plugin you can update this plugin it in grails SVN yourself. The original author has no desire to manage releases - provided you follow the clear conventions set out, all users of this plugin will be happy! Be my guest and release new versions as and when - just don't break anything for existing users. That means:
 * Always include jqueryui resources that include all widgets and effects
-* Always include the default theme as ui-lightness
+* Always include the default theme as `ui-lightness`
 * Don't add any functionality tags to this plugin
 * Only update the jquery core library dependency when absolutely necessary, i.e. when jquery ui requires it.
-*IMPORTANT:* The version number of the plugin and the jquery ui distribution is not always the same. Sometimes you have plugin point releases to fix problems. As a result it does not automatically use the plugin's version number to insert the correct jquery ui resources. When changing the jquery ui resource versions included in the plugin source, you must also change the JQUERYUI_VERSION constant in jQueryUiGrailsPlugin.groovy - or the jqui:resources tag will not pull in the correct css and js files.
+*IMPORTANT:* The version number of the plugin and the jquery ui distribution is not always the same. Sometimes you have plugin point releases to fix problems. As a result it does not automatically use the plugin's version number to insert the correct jquery ui resources. When changing the jquery ui resource versions included in the plugin source, you must also change the `JQUERYUI_VERSION` constant in [jQueryUiGrailsPlugin.groovy](./jQueryUiGrailsPlugin.groovy) - or the `<jqui:resources/>` tag will not pull in the correct css and js files.
 
 ### Conventions
 The version number of this plugin must always follow the version number of the jQuery UI version it bundles, with possible 4th-level point releases for patches/iterations of the plugin with the same jQuery library.
@@ -64,7 +64,7 @@ This plugin integrates fully with the Grails resources framework. By installing 
 The modules available are:
 
 * `jquery-ui` - The core jQuery UI code, which automatically depends on query.
-* `jquery-theme` - The default jQuery 'lightness" theme. The jQuery-UI module depends on this module automatically. You can override the CSS file of this resource using the Resources framework. The CSS resource's id is "theme". Alternatively you can override the dependsOn of 'jquery-ui' to depend on some other module you define containing your theme.
+* `jquery-theme` - The default jQuery `lightness` theme. The jQuery-UI module depends on this module automatically. You can override the CSS file of this resource using the Resources framework. The CSS resource's id is "theme". Alternatively you can override the `dependsOn 'jquery-ui'` to depend on some other module you define containing your theme.
 * `jquery-ui-dev` - The non-minified version of jQuery for development mode.
 
 ### Usage with the Resources framework
@@ -76,7 +76,7 @@ Simple add the following to your GSP or site mesh layout:
 
 ### Overriding the Default Theme
 
-If you are using the jquery-ui plugin with the [Resources](http://grails.org/plugin/resources) Framework, you can easily override the jquery-theme module to use your own custom jQuery theme. See Resources Framework Documentation for more details.
+If you are using the jquery-ui plugin with the [Resources](http://grails.org/plugin/resources) Framework, you can easily override the `jquery-theme` module to use your own custom jQuery theme. See Resources Framework Documentation for more details.
 ```groovy
 grails.resources.modules = {
   …
@@ -91,25 +91,25 @@ grails.resources.modules = {
 Everything else is done for you. You do not need any of the legacy tags or configuration specified in the rest of this documentation.
 
 ### Legacy Tags
-*NOTE: These tags are only for developers not using the Grails Resources framework*
+**NOTE: These tags are only for developers not using the Grails Resources framework**
 
-There is one tag - `<jqui:resources/>` - which pulls in the resources needed. It does *not* currently pull in the core jQuery resources, you should use the <g:javascript lib="jquery"/> tag for that.
+There is one tag - `<jqui:resources/>` - which pulls in the resources needed. It does **not** currently pull in the core jQuery resources, you should use the `<g:javascript lib="jquery"/>` tag for that.
 
 You can override the theme used by jQuery UI by specifying the `theme` attribute with a value of the theme name, and the theme will then be located by pulling it from your app using the path:
 ```
 <appcontext>/jquery-ui/themes/<themename>/jquery-ui-<ver>.custom.css
 ```
-or, by using the themeDir attribute:
+or, by using the `themeDir` attribute:
 ```
 <appcontext>/<themeDir>/<themename>/jquery-ui-<ver>.custom.css
 ```
-Alternatively you may want to specify the full URI to the theme CSS so that your custom themes work even if the version of jquery ui plugin you use changes. To do this, specify themeCss:
+Alternatively you may want to specify the full URI to the theme CSS so that your custom themes work even if the version of jquery ui plugin you use changes. To do this, specify `themeCss`:
 ```gsp
 <jqui:resources themeCss="/path/to/your/custom-1.8.3.css"/>
 ```
 
 ### Configuration
-*Like any config param you can make those below environment specific (e.g minified=false for DEV, and cdn='googlecode' for production)*
+**Like any config param you can make those below environment specific (e.g minified=false for DEV, and cdn='googlecode' for production)**
 
 #### minified
 You can choose if the minified version of the .js shoud be used (or not) by using the following config parameter
