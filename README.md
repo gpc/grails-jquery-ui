@@ -48,7 +48,7 @@ If you need a newer version of jQuery UI than is currently available with this p
 * Always include the default theme as `ui-lightness`
 * Don't add any functionality tags to this plugin
 * Only update the jquery core library dependency when absolutely necessary, i.e. when jquery ui requires it.
-*IMPORTANT:* The version number of the plugin and the jquery ui distribution is not always the same. Sometimes you have plugin point releases to fix problems. As a result it does not automatically use the plugin's version number to insert the correct jquery ui resources. When changing the jquery ui resource versions included in the plugin source, you must also change the `JQUERYUI_VERSION` constant in [jQueryUiGrailsPlugin.groovy](./jQueryUiGrailsPlugin.groovy) - or the `<jqui:resources/>` tag will not pull in the correct css and js files.
+*IMPORTANT:* The version number of the plugin and the jquery ui distribution is not always the same. Sometimes you have plugin point releases to fix problems. As a result it does not automatically use the plugin's version number to insert the correct jquery ui resources. When changing the jquery ui resource versions included in the plugin source, you must also change the `JQUERYUI_VERSION` constant in [JqueryUiGrailsPlugin.groovy](./JqueryUiGrailsPlugin.groovy) - or the `<jqui:resources/>` tag will not pull in the correct css and js files.
 
 ### Conventions
 The version number of this plugin must always follow the version number of the jQuery UI version it bundles, with possible 4th-level point releases for patches/iterations of the plugin with the same jQuery library.
@@ -111,7 +111,7 @@ Alternatively you may want to specify the full URI to the theme CSS so that your
 ```
 
 ### Configuration
-**Like any config param you can make those below environment specific (e.g minified=false for DEV, and cdn='googlecode' for production)**
+**Like any config param you can make those below environment specific (e.g `minified=false` for DEV, and `cdn='googlecode'` for production)**
 
 #### minified
 You can choose if the minified version of the .js shoud be used (or not) by using the following config parameter
