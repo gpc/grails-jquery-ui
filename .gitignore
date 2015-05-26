@@ -6,3 +6,5 @@ grails-jquery-ui-*.zip.sha1
 plugin.xml
 .settings
 web-app/WEB-INF
+.idea
+*.iml
